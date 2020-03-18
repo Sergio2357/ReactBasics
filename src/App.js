@@ -1,7 +1,7 @@
 import React from 'react';
 import asimetrix from './images/asimetrix.png';
 import './App.css';
-import TutCard from './TutCard'
+import Tutorials from './Tutorials'
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         <img src={asimetrix} />
       </header>
       <div className="container">
-        <TutCard/>
+        <Tutorials/>
       </div>
     </div>
   );

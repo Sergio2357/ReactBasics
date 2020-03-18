@@ -7,10 +7,10 @@ export default class TutCard extends React.Component {
       super(props)
   
       this.state = {
-        title : "React Basics",
-        description : "This Tutorial is for the basic understanding of React",
-        gitrepo : "https://github.com/Sergio2357/ReactBasics",
-        listTopics: ["Babel, Webpack, Routing", "Create React App", "Components", "Basic Tutorial"]
+        title : props.title,
+        description : props.description,
+        gitrepo : props.gitrepo,
+        listTopics: props.listTopics
       }
   
     }
