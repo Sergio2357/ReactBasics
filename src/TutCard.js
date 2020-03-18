@@ -9,7 +9,8 @@ export default class TutCard extends React.Component {
       this.state = {
         title : "React Basics",
         description : "This Tutorial is for the basic understanding of React",
-        gitrepo : "https://github.com/Sergio2357/ReactBasics"
+        gitrepo : "https://github.com/Sergio2357/ReactBasics",
+        listTopics: ["Babel, Webpack, Routing", "Create React App", "Components", "Basic Tutorial"]
       }
   
     }
@@ -25,10 +26,9 @@ export default class TutCard extends React.Component {
                 </Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
-                <ListGroupItem>Babel, Webpack, Routing</ListGroupItem>
-                <ListGroupItem>Create React App</ListGroupItem>
-                <ListGroupItem>Components</ListGroupItem>
-                <ListGroupItem>Basic Tutorial</ListGroupItem>
+                {this.state.listTopics.map(function(item) {
+                  return <ListGroupItem key={item}>{item}</ListGroupItem>
+                })}
             </ListGroup>
             <Card.Body>
                 <Card.Link className="card-link" href="#">More Info</Card.Link>
