@@ -7,6 +7,9 @@ export default class TutCard extends React.Component {
       super(props)
   
       this.state = {
+        title : "React Basics",
+        description : "This Tutorial is for the basic understanding of React",
+        gitrepo : "https://github.com/Sergio2357/ReactBasics"
       }
   
     }
@@ -16,9 +19,9 @@ export default class TutCard extends React.Component {
             <Card style={{ width: '18rem', backgroundColor: 'aliceblue'}} text={'dark'}>
             <Card.Img variant="top" src={logo} className="App-logo" alt="logo"/>
             <Card.Body>
-                <Card.Title class='h2'>React Basics</Card.Title>
+                <Card.Title class='h2'>{this.state.title}</Card.Title>
                 <Card.Text className="card-text" style={{size:'a3'}}>
-                This Tutorial is for the basic understanding of React
+                {this.state.description}
                 </Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
@@ -29,7 +32,7 @@ export default class TutCard extends React.Component {
             </ListGroup>
             <Card.Body>
                 <Card.Link className="card-link" href="#">More Info</Card.Link>
-                <Card.Link classNAme="card-link" href="#">Git Repo</Card.Link>
+                <Card.Link classNAme="card-link" href={this.state.gitrepo}>Git Repo</Card.Link>
             </Card.Body>
             </Card>
         </React.Fragment>
