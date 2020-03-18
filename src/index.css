@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.list-group-item {
+  background-color: rgb(196, 238, 255);
+}
+
+.list-group-flush {
+  font-size: small;
+}
+
+.card-link {
+  font-size: small;
+}
+
+.card-text {
+  font-size: medium;
+} 
