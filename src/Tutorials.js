@@ -34,7 +34,7 @@ export default class Tutorials extends React.Component {
                             listTopics : ["Babel, Webpack, Routing", "Create React App", "Components", "Basic Tutorial"]}),
             JSON.stringify({title : "React Basics 2.0",
                             description : "This Tutorial is the continuation of a previous one (React Basics)",
-                            gitrepo : "https://github.com/Sergio2357/ReactBasics",
+                            gitrepo : "https://github.com/Sergio2357/ReactBasics/tree/listOfCards",
                             listTopics : ["State of Components", "Lifecycle", "Fetching Data"]})
         ]
       }
@@ -47,5 +47,3 @@ export default class Tutorials extends React.Component {
         )  
     }
   }
-
-
