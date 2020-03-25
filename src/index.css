@@ -27,3 +27,17 @@ code {
 .card-text {
   font-size: medium;
 } 
+
+.button-card {
+  border-radius: 8px;
+  color: rgb(174, 245, 250);
+  background-color: rgb(24, 161, 216);
+  margin-bottom: 2em;
+  margin-top: 1em;
+}
+
+.button-card:hover {
+  background-color: rgb(196, 238, 255); 
+  color: white;
+}
+

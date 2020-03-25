@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={asimetrix} />
+        <img alt="" src={asimetrix} />
       </header>
       <div className="container">
         <Tutorials/>
