@@ -9,7 +9,7 @@ export async function fetchTutorials () {
             'Authorization': 'application/json',
         }
         })
-      .then((res) => res.text())
+      .then((res) => res.json())
         .catch(error => {
             return new Promise((resolve, reject) => {
                 reject(error)

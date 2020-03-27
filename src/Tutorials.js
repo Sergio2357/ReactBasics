@@ -8,6 +8,7 @@ function TutorialsGrid ({ tutorials }) {
       <ul className='grid space-around'>
         {tutorials.map((tutorials) => {
           const { title, description, gitrepo, listTopics, isDictated } = JSON.parse(tutorials)
+          console.log(isDictated);
           return (
             <li key={title}>
               <TutCard
@@ -31,33 +32,19 @@ export default class Tutorials extends React.Component {
       this.state = {
         
         msg : '',
-        tutorials: [
-            JSON.stringify({title : "React Basics",
-                            description : "This Tutorial is for the basic understanding of React",
-                            gitrepo : "https://github.com/Sergio2357/ReactBasics",
-                            listTopics : ["Babel, Webpack, Routing", "Create React App", "Components", "Basic Tutorial"],
-                            isDictated: true}),
-            JSON.stringify({title : "React Basics 2.0",
-                            description : "This Tutorial is the continuation of a previous one (React Basics)",
-                            gitrepo : "https://github.com/Sergio2357/ReactBasics/tree/listOfCards",
-                            listTopics : ["State of Components", "Lifecycle", "Fetching Data"],
-                            isDictated: false})
-        ]
+        tutorials: []
       }
     }
+
     async componentDidMount() {
-        console.log('ssss');
+        console.log('fetching tutorials');
         this.fetchMoreData()
     }
-    //componentDidUpdate(prevProps, prevState, snapshot) {
-      //  console.log(this.props.msg);
-        //if (this.props !== prevProps) {
-          //  this.setState({ msg: ''}, () => this.fetchMoreData())
-        //}
-    //}
+
     fetchMoreData = async () => {
-        const newmsg = await fetchTutorials()
-        this.setState({ msg: newmsg})
+        let tutorialsLambda = await fetchTutorials()
+        console.log(tutorialsLambda);
+        this.setState({ tutorials: tutorialsLambda.map((tutorial) => JSON.stringify(tutorial))})
     };
     render() {
         const { tutorials } = this.state
