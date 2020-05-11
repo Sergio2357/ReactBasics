@@ -8,7 +8,6 @@ function TutorialsGrid ({ tutorials }) {
       <ul className='grid space-around'>
         {tutorials.map((tutorials) => {
           const { title, description, gitrepo, listTopics, isDictated } = JSON.parse(tutorials)
-          console.log(isDictated);
           return (
             <li key={title}>
               <TutCard
